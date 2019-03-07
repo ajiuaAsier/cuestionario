@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+  <form name="loginForm" (submit)="enviar()">
   <ion-list>
   <ion-radio-group>
     <ion-list-header>
@@ -26,5 +27,11 @@
       <ion-radio slot="start" value="mal"></ion-radio>
     </ion-item>
   </ion-radio-group>
-</ion-list>
+  </ion-list>
+  <ion-label color="dark">Nombre</ion-label>
+  <ion-input type="text" maxLength="10" placeholder="Nombre" [(ngModel)]="myNombre"></ion-input>
+  <ion-button color="blue-action" shape="round" expand="full" id="submit" type="submit"
+	            style="margin-top: 15px;"
+	            [disabled]="disableNavigation">Enviar</ion-button>
+  </form>
 </ion-content>

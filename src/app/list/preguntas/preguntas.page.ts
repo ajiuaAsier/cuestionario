@@ -11,5 +11,10 @@ export class PreguntasPage implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  myNombre: string;
+  
+  enviar() {
+	 alert(this.myNombre);
+  }
 }
