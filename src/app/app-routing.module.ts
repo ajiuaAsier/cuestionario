@@ -15,7 +15,8 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'preguntas', loadChildren: './list/preguntas/preguntas.module#PreguntasPageModule' }
+  { path: 'preguntas', loadChildren: './list/preguntas/preguntas.module#PreguntasPageModule' },
+  { path: 'respuesta/:myNombre', loadChildren: './list/respuesta/respuesta.module#RespuestaPageModule' },
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-preguntas',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreguntasPage implements OnInit {
 
-  constructor() { }
+  myName = 0;
+
+  constructor(private nav: navController) { }
 
   ngOnInit() {
   }
   
-  myNombre: string;
-  
-  enviar() {
-	 alert(this.myNombre);
+  pushPage() {
+	this.nav.navigateForward(`/respuesta/${this.myName}`);  
   }
 }
