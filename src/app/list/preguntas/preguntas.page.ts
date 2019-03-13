@@ -8,14 +8,14 @@ import { NavController } from '@ionic/angular';
 })
 export class PreguntasPage implements OnInit {
 
-  myName = 0;
+  myNombre = null;
 
-  constructor(private nav: navController) { }
+  constructor(private nav: NavController) { }
 
   ngOnInit() {
   }
   
   pushPage() {
-	this.nav.navigateForward(`/respuesta/${this.myName}`);  
+	this.nav.navigateForward(`/respuesta/${this.myNombre}`);  
   }
 }
