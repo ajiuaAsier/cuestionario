@@ -9,6 +9,9 @@ import { NavController } from '@ionic/angular';
 export class PreguntasPage implements OnInit {
 
   myNombre = null;
+  apellido = null;
+  correo = null;
+  sexo = null;
   sabado = null;
   domingo = null;
   libres = null;
@@ -21,6 +24,6 @@ export class PreguntasPage implements OnInit {
   }
   
   pushPage() {
-	this.nav.navigateForward(`/respuesta/${this.myNombre}/${this.sabado}/${this.domingo}/${this.libres}/${this.pausa}/${this.ritmo}`);  
+	this.nav.navigateForward(`/respuesta/${this.myNombre}/${this.apellido}/${this.correo}/${this.sexo}/${this.sabado}/${this.domingo}/${this.libres}/${this.pausa}/${this.ritmo}`);  
   }
 }

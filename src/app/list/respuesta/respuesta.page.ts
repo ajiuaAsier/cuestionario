@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class RespuestaPage implements OnInit {
 	
   myNombre = null;
+  apellido = null;
+  correo = null;
+  sexo = null;
   sabado = null;
   domingo = null;
   libres = null;
@@ -18,7 +21,10 @@ export class RespuestaPage implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-	this.myNombre = this.activatedRoute.snapshot.paramMap.get('myNombre');
+  this.myNombre = this.activatedRoute.snapshot.paramMap.get('myNombre');
+  this.apellido = this.activatedRoute.snapshot.paramMap.get('apellido');
+  this.correo = this.activatedRoute.snapshot.paramMap.get('correo');
+  this.sexo = this.activatedRoute.snapshot.paramMap.get('sexo');
 	this.sabado = this.activatedRoute.snapshot.paramMap.get('sabado');
 	this.domingo = this.activatedRoute.snapshot.paramMap.get('domingo');
 	this.libres = this.activatedRoute.snapshot.paramMap.get('libres');

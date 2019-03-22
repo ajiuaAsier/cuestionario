@@ -7,7 +7,28 @@
 <ion-content>
   <!-- <form name="preguntasForm"> -->
   <ion-list>
-    <ion-list-header><h3>Cuestionario: Elige la respuesta que mas se adecue a ti</h3></ion-list-header>
+		<ion-list-header><h3>Cuestionario: Elige la respuesta que mas se adecue a ti</h3></ion-list-header>
+	<ion-card>
+		<ion-card-header>
+			<ion-card-title>Datos Personales</ion-card-title>
+		</ion-card-header>
+		<ion-card-content>
+			<ion-label color="dark">Nombre</ion-label>
+			<ion-input [(ngModel)]="myNombre" type="text" placeholder="Nombre"></ion-input>
+			<ion-label color="dark">Apellido</ion-label>
+			<ion-input [(ngModel)]="apellido" type="text" placeholder="Apellido"></ion-input>
+			<ion-label color="dark">Correo Electronico</ion-label>
+			<ion-input [(ngModel)]="correo" type="text" placeholder="Correo Electronico"></ion-input>
+			<ion-label color="dark">Sexo</ion-label>
+			<ion-item>
+				<ion-select placeholder="Sexo" [(ngModel)]="sexo">
+				<ion-select-option>Hombre</ion-select-option>
+				<ion-select-option>Mujer</ion-select-option>
+				<ion-select-option>Prefiero no decirlo</ion-select-option>
+				</ion-select>
+			</ion-item>
+		</ion-card-content>
+	</ion-card>
 	<ion-label>1. ¿Trabajas los sabados?</ion-label>
     <ion-item>
 	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="sabado">
@@ -16,7 +37,7 @@
 		<ion-select-option>A veces</ion-select-option>
 		<ion-select-option>Nunca o casi nunca</ion-select-option>
 	  </ion-select>
-    </ion-item>
+  	</ion-item>
 	
 	<ion-label>2. ¿Trabajas los domingos y festivos?</ion-label>
     <ion-item>
@@ -26,7 +47,7 @@
 		<ion-select-option>A veces</ion-select-option>
 		<ion-select-option>Nunca o casi nunca</ion-select-option>
 	  </ion-select>
-    </ion-item>
+  	</ion-item>
 	
 	<ion-label>3. ¿Tienes la posibilidad de tomar dias u horas libres para atender asuntos de tipo personal?</ion-label>
     <ion-item>
@@ -36,7 +57,7 @@
 		<ion-select-option>A veces</ion-select-option>
 		<ion-select-option>Nunca o casi nunca</ion-select-option>
 	  </ion-select>
-    </ion-item>
+  	</ion-item>
 	
 	<ion-label>4. ¿Puedes decidir cuando realizar las pausas reglamentarias (pausa para comida o bocadillo)?</ion-label>
     <ion-item>
@@ -46,7 +67,7 @@
 		<ion-select-option>A veces</ion-select-option>
 		<ion-select-option>Nunca o casi nunca</ion-select-option>
 	  </ion-select>
-    </ion-item>
+  	</ion-item>
 	
 	<ion-label>5. ¿Puedes marcar tu propio ritmo de trabajo a lo largo de la jornada laboral?</ion-label>
     <ion-item>
@@ -58,8 +79,7 @@
 	  </ion-select>
     </ion-item>
   </ion-list>
-  <ion-label color="dark">Nombre</ion-label>
-  <ion-input [(ngModel)]="myNombre" type="text" placeholder="Nombre"></ion-input>
-  <ion-button expand="full" (click)="pushPage()">Enviar</ion-button>
+	<ion-button expand="full" (click)="pushPage()">Enviar</ion-button>
+	<a href="../">VOLVER</a>
   <!-- </form> -->
 </ion-content>
