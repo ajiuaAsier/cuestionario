@@ -16,7 +16,8 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'preguntas', loadChildren: './list/preguntas/preguntas.module#PreguntasPageModule' },
-  { path: 'respuesta/:myNombre/:apellido/:correo/:sexo/:sabado/:domingo/:libres/:pausa/:ritmo', loadChildren: './list/respuesta/respuesta.module#RespuestaPageModule' },
+  { path: 'details', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
+  { path: 'details/:id', loadChildren: './pages/todo-details/todo-details.module#TodoDetailsPageModule' },
 ];
 
 @NgModule({

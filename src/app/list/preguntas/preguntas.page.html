@@ -14,14 +14,14 @@
 		</ion-card-header>
 		<ion-card-content>
 			<ion-label color="dark">Nombre</ion-label>
-			<ion-input [(ngModel)]="myNombre" type="text" placeholder="Nombre"></ion-input>
+			<ion-input [(ngModel)]="todo.nombre" type="text" placeholder="Nombre"></ion-input>
 			<ion-label color="dark">Apellido</ion-label>
-			<ion-input [(ngModel)]="apellido" type="text" placeholder="Apellido"></ion-input>
+			<ion-input [(ngModel)]="todo.apellido" type="text" placeholder="Apellido"></ion-input>
 			<ion-label color="dark">Correo Electronico</ion-label>
-			<ion-input [(ngModel)]="correo" type="text" placeholder="Correo Electronico"></ion-input>
+			<ion-input [(ngModel)]="todo.correo" type="text" placeholder="Correo Electronico"></ion-input>
 			<ion-label color="dark">Sexo</ion-label>
 			<ion-item>
-				<ion-select placeholder="Sexo" [(ngModel)]="sexo">
+				<ion-select placeholder="Sexo" [(ngModel)]="todo.sexo">
 				<ion-select-option>Hombre</ion-select-option>
 				<ion-select-option>Mujer</ion-select-option>
 				<ion-select-option>Prefiero no decirlo</ion-select-option>
@@ -31,7 +31,7 @@
 	</ion-card>
 	<ion-label>1. ¿Trabajas los sabados?</ion-label>
     <ion-item>
-	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="sabado">
+	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="todo.sabado">
         <ion-select-option>Siempre o casi siempre</ion-select-option>
 		<ion-select-option>A menudo</ion-select-option>
 		<ion-select-option>A veces</ion-select-option>
@@ -41,7 +41,7 @@
 	
 	<ion-label>2. ¿Trabajas los domingos y festivos?</ion-label>
     <ion-item>
-	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="domingo">
+	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="todo.domingo">
         <ion-select-option>Siempre o casi siempre</ion-select-option>
 		<ion-select-option>A menudo</ion-select-option>
 		<ion-select-option>A veces</ion-select-option>
@@ -51,7 +51,7 @@
 	
 	<ion-label>3. ¿Tienes la posibilidad de tomar dias u horas libres para atender asuntos de tipo personal?</ion-label>
     <ion-item>
-	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="libres">
+	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="todo.libres">
         <ion-select-option>Siempre o casi siempre</ion-select-option>
 		<ion-select-option>A menudo</ion-select-option>
 		<ion-select-option>A veces</ion-select-option>
@@ -61,7 +61,7 @@
 	
 	<ion-label>4. ¿Puedes decidir cuando realizar las pausas reglamentarias (pausa para comida o bocadillo)?</ion-label>
     <ion-item>
-	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="pausa">
+	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="todo.pausa">
         <ion-select-option>Siempre o casi siempre</ion-select-option>
 		<ion-select-option>A menudo</ion-select-option>
 		<ion-select-option>A veces</ion-select-option>
@@ -71,7 +71,7 @@
 	
 	<ion-label>5. ¿Puedes marcar tu propio ritmo de trabajo a lo largo de la jornada laboral?</ion-label>
     <ion-item>
-	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="ritmo">
+	  <ion-select placeholder="Elige una respuesta" [(ngModel)]="todo.ritmo">
         <ion-select-option>Siempre o casi siempre</ion-select-option>
 		<ion-select-option>A menudo</ion-select-option>
 		<ion-select-option>A veces</ion-select-option>
