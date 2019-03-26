@@ -38,13 +38,13 @@ export class TodoService {
     );
   }
 
-  getTodos() {
+  /*getTodos() {
     return this.todos;
-  }
+  } */
 
-  getTodos() {
+  /*getTodos() {
     return this.todosCollection.doc<Todo>(id).valueChanges();
-  }
+  }*/
 
   updateTodo(todo: Todo, id: string) {
     return this.todosCollection.doc(id).update(todo);

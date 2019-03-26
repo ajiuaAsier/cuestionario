@@ -34,12 +34,12 @@ export class PreguntasPage implements OnInit {
  
   ngOnInit() {
     this.todoId = this.route.snapshot.params['id'];
-    if (this.todoId)  {
+    /*if (this.todoId)  {
       this.loadTodo();
-    }
+    }*/
   }
  
-  async loadTodo() {
+  /*async loadTodo() {
     const loading = await this.loadingController.create({
       message: 'Loading Todo..'
     });
@@ -49,6 +49,10 @@ export class PreguntasPage implements OnInit {
       loading.dismiss();
       this.todo = res;
     });
+  } */
+
+  volverPage() {
+    this.nav.navigateForward(`/home`);
   }
  
   async pushPage() {
@@ -70,15 +74,5 @@ export class PreguntasPage implements OnInit {
         //this.nav.goBack('home');
       });
     }
-  }
-
-
-
-  //constructor(private nav: NavController) { } 
-
-  
-  
-  //pushPage() {
-	  //this.nav.navigateForward(`/respuesta/${this.myNombre}/${this.apellido}/${this.correo}/${this.sexo}/${this.sabado}/${this.domingo}/${this.libres}/${this.pausa}/${this.ritmo}`);  
-  //}
+  } 
 }
