@@ -55,23 +55,23 @@ export class PreguntasPage implements OnInit {
     this.nav.navigateForward(`/home`);
   }
  
+  // Las acciones que conlleva pulsar el boton "enviar" en el formulario. Primero crea un imagen de "guardando respuesta".
   async pushPage() {
     const loading = await this.loadingController.create({
       message: 'Guardando respuestas'
     });
     await loading.present();
  
+    // En caso de que existan los datos los reemplaza, si no añade una nueva ficha a la base de datos.
     if (this.todoId) {
       this.todoService.updateTodo(this.todo, this.todoId).then(() => {
         loading.dismiss();
         this.nav.navigateForward(`/home`);
-        //this.nav.goBack('home');
       });
     } else {
       this.todoService.addTodo(this.todo).then(() => {
         loading.dismiss();
         this.nav.navigateForward(`/home`);
-        //this.nav.goBack('home');
       });
     }
   } 

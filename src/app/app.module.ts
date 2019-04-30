@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
+// Codigo para que la base de datos funcione.
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

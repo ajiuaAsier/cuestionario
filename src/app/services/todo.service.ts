@@ -3,6 +3,7 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+// Presentacion de la interfaz donde se recogeran la ¡s variables que interactuaran con la base de datos.
 export interface Todo {
   nombre: string,
   apellido: string,
@@ -15,6 +16,7 @@ export interface Todo {
   ritmo: string,
 }
 
+// Declaracion de las acciones que podremos llamar en los ficheros necesarios para interactuar con la base de datos. Añadir, actualizar o eliminar.
 @Injectable({
   providedIn: 'root'
 })

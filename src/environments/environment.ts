@@ -2,6 +2,7 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+// API de la base de datos Firebase.
 export const environment = {
   production: false,
   firebase: {
